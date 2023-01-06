@@ -6,4 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProductService {
   constructor(private httpService$: HttpClient) {}
+
+  public getAllProducts() {
+    return this.httpService$.get(`https://localhost:7225/api/Product/all`);
+  }
 }
