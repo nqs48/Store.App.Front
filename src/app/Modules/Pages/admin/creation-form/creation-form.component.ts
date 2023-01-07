@@ -91,4 +91,8 @@ export class CreationFormComponent implements OnInit {
       }
     });
   }
+
+  gotoProducts() {
+    this.router.navigate(['/products']);
+  }
 }
