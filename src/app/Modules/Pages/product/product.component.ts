@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+//import { Router } from '@angular/router';
 import { ProductService } from '../../Services/product/product.service';
-
+import { ResponseModel } from '../../interfaces/response.model';
+import { ProductModel } from '../../interfaces/product.model';
 
 @Component({
   selector: 'app-product',
@@ -9,21 +10,25 @@ import { ProductService } from '../../Services/product/product.service';
   styleUrls: ['./product.component.css'],
 })
 export class ProductComponent implements OnInit {
-  products: any;
 
-  constructor(
-    private router$: Router,
-    private productService$: ProductService
-  ) {}
+
+
+  public products?: ProductModel[];
+
+
+
+
+  constructor(private productService$: ProductService) {}
 
   ngOnInit() {
-    this.productService$.getAllProducts().subscribe({
-      next: (data) => {
-        console.log('Return data products--: ', data);
-        this.products = data;
-      },
-      error: (err) => console.log(err),
-      complete: () => console.log('complete'),
+    this.getProducts();
+  }
+
+  public getProducts() {
+
+    this.productService$.getAllProducts().subscribe((data) => {
+      this.products = data;
     });
+
   }
 }
