@@ -11,11 +11,19 @@ import { ComponentsModule } from './Modules/Components/Components.module';
 import { HomeComponent } from './Modules/Pages/home/home.component';
 import { ProductComponent } from './Modules/Pages/product/product.component';
 import { HttpClientModule } from '@angular/common/http';
-import { AdminComponent } from './Modules/Pages/admin/admin.component';
+import { CreationFormComponent } from './Modules/Pages/admin/creation-form/creation-form.component';
+import { ActionFormComponent } from './Modules/Pages/admin/action-form/action-form.component';
+
 
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ProductComponent, AdminComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    ProductComponent,
+    CreationFormComponent,
+    ActionFormComponent
+  ],
   imports: [
     BrowserModule,
     HttpClientModule,
