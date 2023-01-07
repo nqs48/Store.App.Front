@@ -16,8 +16,7 @@ export class NavBarComponent implements OnInit {
   }
 
   btnProducts(): void {
-    //this.router.navigate(['/products']);
-    alert('Products: En construcción');
+    this.router.navigate(['/products']);
   }
 
   btnIndex(): void {
