@@ -13,6 +13,7 @@ import { ProductComponent } from './Modules/Pages/product/product.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CreationFormComponent } from './Modules/Pages/admin/creation-form/creation-form.component';
 import { ActionFormComponent } from './Modules/Pages/admin/action-form/action-form.component';
+import { BuyComponent } from './Modules/Pages/buy/buy.component';
 
 
 
@@ -22,7 +23,8 @@ import { ActionFormComponent } from './Modules/Pages/admin/action-form/action-fo
     HomeComponent,
     ProductComponent,
     CreationFormComponent,
-    ActionFormComponent
+    ActionFormComponent,
+    BuyComponent
   ],
   imports: [
     BrowserModule,
