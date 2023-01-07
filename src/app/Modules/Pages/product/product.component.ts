@@ -28,7 +28,20 @@ export class ProductComponent implements OnInit {
     });
   }
 
-  public goActions() {
-    this.router.navigate(['/actions']);
+  public goActions(id: number) {
+    this.router.navigate([`/actions/${id}`]);
   }
+
+
+  // public getProductById(id: number) {
+  //   this.productService$.getProductById(id).subscribe({
+  //     next: (data) => {
+  //       console.log(data);
+  //     },
+  //     error: (err) => {
+  //       console.log(err);
+  //     },
+  //   });
+  //   }
+
 }

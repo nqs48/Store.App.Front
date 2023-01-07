@@ -2,32 +2,32 @@
 <app-nav-bar></app-nav-bar>
 <section class="text-gray-600 body-font bg-slate-100">
   <div class="container px-5 py-24 mx-auto">
-
-    <div  class="flex justify-center flex-wrap -m-4 ">
-
-      <button   (click)="goActions()"  *ngFor="let item of products; let i = index" class="bg-white bg-opacity-50 shadow-xl rounded-md lg:w-1/4 md:w-1/4 p-4 m-3 w-full hover:transform hover:scale-95 active:transform active:scale-90 opacity-95">
-        <a class="block relative h-48 rounded overflow-hidden">
-          <img alt="ecommerce" class="object-cover object-center w-30 h-30 block" src="https://source.unsplash.com/random">
-        </a>
-        <div class="mt-4">
-          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-          <h2 class="text-gray-900 title-font text-lg font-medium">{{item.name}}</h2>
-          <h4 class="mt-1">{{item.inInventory}} Units</h4>
-          <p class="mt-1">$16.00</p>
-        </div>
-      </button>
-
+    <div class="flex justify-center flex-wrap -m-4">
+      <div
+        *ngFor="let item of products; let i = index"
+        class="bg-white bg-opacity-50 shadow-xl rounded-md lg:w-1/4 md:w-1/4 p-4 m-3 w-full hover:transform hover:scale-95 active:transform active:scale-90 opacity-95"
+      >
+        <button (click)="goActions(item.id)">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img
+              alt="ecommerce"
+              class="object-cover object-center w-30 h-30 block"
+              src="https://source.unsplash.com/random"
+            />
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
+              CATEGORY
+            </h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">
+              {{ item.name }}
+            </h2>
+            <h4 class="mt-1">{{ item.inInventory }} Units</h4>
+            <p class="mt-1">$16.00</p>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </section>
 <app-footer></app-footer>
-
-
-<!-- https://source.unsplash.com/random
-  https://source.unsplash.com/random
-
-
-
-
-
--->
