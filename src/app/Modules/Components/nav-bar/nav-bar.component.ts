@@ -22,19 +22,9 @@ export class NavBarComponent implements OnInit {
 
   btnIndex(): void {
     this.router.navigate(['/home']);
-    alert('Home: En construcción');
   }
 
   btnCreate(): void {
-    //this.router.navigate(['/create']);
-    this.Swal$.confirmationPopup(
-      'En construcción',
-      'Esta pagina aun no esta disponible',
-      'Aceptar'
-    ).then((result) => {
-      if (result.isConfirmed) {
-        this.router.navigate(['/home']);
-      }
-    });
+    this.router.navigate(['/buys']);
   }
 }
