@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SweetService } from '../../Services/swal/sweet.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,13 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./nav-bar.component.css'],
 })
 export class NavBarComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private Swal$: SweetService) {}
 
   ngOnInit() {}
 
   btnAdmin(): void {
     this.router.navigate(['/addProduct']);
-
   }
 
   btnProducts(): void {
@@ -27,6 +27,14 @@ export class NavBarComponent implements OnInit {
 
   btnCreate(): void {
     //this.router.navigate(['/create']);
-    alert('Create: En construcción');
+    this.Swal$.confirmationPopup(
+      'En construcción',
+      'Esta pagina aun no esta disponible',
+      'Aceptar'
+    ).then((result) => {
+      if (result.isConfirmed) {
+        this.router.navigate(['/home']);
+      }
+    });
   }
 }
