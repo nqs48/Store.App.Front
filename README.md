@@ -1,4 +1,4 @@
-# Store.App
+# Store.App.Front
 Technical challenge to evaluate the knowledge acquired in the sofka talent zone applying knowledge in the .net platform and C# programming language and Angular Framework to frontend Module
 
 
