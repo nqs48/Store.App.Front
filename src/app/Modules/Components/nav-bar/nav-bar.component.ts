@@ -11,8 +11,9 @@ export class NavBarComponent implements OnInit {
 
   ngOnInit() {}
 
-  btnLogout(): void {
-    console.log('Logout: Sales del sistema');
+  btnAdmin(): void {
+    this.router.navigate(['/addProduct']);
+
   }
 
   btnProducts(): void {
